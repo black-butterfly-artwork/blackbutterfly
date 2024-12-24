@@ -1,0 +1,79 @@
+<!-- <mat-toolbar color="primary">
+    <span class="fill-remaining-space">
+        <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger" (mouseover)="menuTrigger.openMenu()">
+        <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <span (mouseleave)="menuTrigger.closeMenu()">
+                <button mat-menu-item *ngFor="let menuItem of menuItems" >
+                    <li routerLinkActive="active" class="{{menuItem.class}} nav-item">
+                        <a class="nav-link" [routerLink]="[menuItem.path]">
+                            <i class="material-icons">{{menuItem.icon}}</i>
+                            <p>{{menuItem.title}}</p>
+                        </a>
+                    </li>
+                </button>
+                <button mat-menu-item>
+                <mat-icon>people_outline</mat-icon>
+                <span>Artwork</span>
+                </button>
+                <button mat-menu-item>
+                <mat-icon>videocam</mat-icon>
+                <span>Contact</span>
+                </button>
+                <button mat-menu-item>
+                <mat-icon>exit_to_app</mat-icon>
+                <span>Logout</span>
+                </button>
+            </span>
+        </mat-menu>
+    </span>
+    <span class="fill-remaining-space">Black Butterfly</span>
+    <div class="form-group d-flex align-items-center">
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search...">
+        <span  class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+    </div>
+  </mat-toolbar> -->
+<header>
+    <mat-toolbar style="background-color:green-a100; margin-bottom:15px">
+        <div class="title">
+            <img src="../../../assets/images/Title2.jpg">
+        </div>
+
+        
+        <span class="fill-remaining-space">
+            <div style="margin-left: 40%">
+                <button mat-button *ngFor="let menuItem of menuItems" style="height: 100%">
+                    <li routerLinkActive="active" class="{{menuItem.class}} nav-item">
+                        <a class="nav-link" [routerLink]="[menuItem.path]">
+                            <i class="material-icons">{{menuItem.icon}}</i>
+                            <p class="menu-title">{{menuItem.title}}</p>
+                        </a>
+                    </li>
+                </button>
+                <button routerLink="cart"  class="btn btn-primary button-cart">
+                    <i style="font-size: 30px;" class="fa fa-shopping-cart"></i>
+                    <div style="font-size: 11px;" class="badge bg-danger badge-top-left">{{totalItem}}</div>
+                </button>
+            </div>
+        </span>
+    </mat-toolbar>
+</header>
+
+
+
+
+<!--header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size: 40px; margin-left:5px;" class="fa fa-truck"></i>&nbsp;
+            <strong  class="title" style="font-size: 30px;"> Shopy</strong>
+            <div class="form-group d-flex align-items-center">
+
+                <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search...">
+                <span  class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+
+            </div>
+        </div-->
+    <!--/div>
+</header> -->
