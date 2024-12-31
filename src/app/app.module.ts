@@ -16,11 +16,15 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatDialogModule } from '@angular/material/dialog';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { PaypalComponent } from './components/payment/paypal/paypal.component';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { CarouselComponent } from './components/dashboard/carousel/carousel.component';
+import { MonthsPaintingComponent } from './components/months-painting/months-painting.component';
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 @NgModule({
   declarations: [
@@ -28,12 +32,14 @@ import { CarouselComponent } from './components/dashboard/carousel/carousel.comp
     HeaderComponent,
     CartComponent,
     ProductsComponent,
+    MonthsPaintingComponent,
     FilterPipe,
     ContactComponent,
     DashboardComponent,
     PaypalComponent,
     PaypalComponent,
-    CarouselComponent
+    CarouselComponent,
+    MonthsPaintingComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +53,7 @@ import { CarouselComponent } from './components/dashboard/carousel/carousel.comp
     MatButtonModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatDialogModule,
     NgxPayPalModule
   ],
   providers: [provideAnimations()],

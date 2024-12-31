@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { CartService } from 'src/app/services/cart.service';
+import { initializeApp } from "firebase/app";
 
 @Component({
   selector: 'app-products',
@@ -16,8 +17,9 @@ export class ProductsComponent {
   sizeArray: any[] = ["small", "medium", "large", "extra large"];
   public selectedSize: string;
   filterFlag: boolean;
-  constructor(private api: ApiService,private cartService : CartService) {
 
+  
+  constructor(private api: ApiService,private cartService : CartService) {
   }
 
   ngOnInit(): void {
@@ -42,6 +44,7 @@ export class ProductsComponent {
     this.selectedSize = 'all';
     this.filterFlag = false;
   }
+
   addToCart(item :any){
    this.cartService.addtoCart(item)
   }

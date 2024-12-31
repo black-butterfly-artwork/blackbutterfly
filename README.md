@@ -1,6 +1,6 @@
 # AddToCart
 
-Go to app : https://berkaycan-add-to-cart.netlify.app
+Go to app : https://berkaycan-black-butterfly.netlify.app
 
 ![image](https://github.com/berkaylxl/Angular-Shopping-Cart-Example/assets/59365403/5358efdc-e1f2-447b-9313-4703b3ad6f3f)
 

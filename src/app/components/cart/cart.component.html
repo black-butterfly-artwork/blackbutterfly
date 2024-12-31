@@ -15,8 +15,7 @@
     <button routerLink="/products" class="btn btn-outline-primary btn-shop">Continue Shopping</button>
     <button class="btn btn-outline-primary btn-shop" (click)="readyToCheckout()">Checkout</button>
 </ng-container>
-{{showCheckoutView}}
-<!--ng-container *ngIf="showCheckoutView"-->
+<ng-container *ngIf="showCheckoutView">
   <div class="container-fluid" >
     <div class="row justify-content-center">
       <app-paypal
@@ -25,18 +24,17 @@
       </app-paypal>
     </div>
   </div>
-<!--/ng-container-->
+</ng-container>
 
 <ng-container *ngIf="products.length ==0">
-    <div class="container">
+    <div class="container-fluid d-flex justify-content-center">
         <div class="card">
-            <h5 class="card-title">My Cart</h5>
-        </div>
         <div class="center">
             <img src="/assets/fcart.png" alt="">
             <h4>Cart is empty!</h4>
             <h6>Add item to it now</h6>
             <button routerLink="/products" class="btn btn-outline-primary">Shop now</button>
+        </div>
         </div>
     </div>
 </ng-container>

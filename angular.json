@@ -8,7 +8,7 @@
     }
   },
   "projects": {
-    "add-to-cart": {
+    "black-butterfly": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/add-to-cart",
+            "outputPath": "dist/black-butterfly",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "add-to-cart:build:production"
+              "browserTarget": "black-butterfly:build:production"
             },
             "development": {
-              "browserTarget": "add-to-cart:build:development"
+              "browserTarget": "black-butterfly:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "add-to-cart:build"
+            "browserTarget": "black-butterfly:build"
           }
         },
         "test": {
@@ -99,6 +99,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

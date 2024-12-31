@@ -4,10 +4,12 @@ import { ProductsComponent } from './components/products/products.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MonthsPaintingComponent } from './components/months-painting/months-painting.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'dashboard',pathMatch:'full'},
   {path:'products', component: ProductsComponent},
+  {path:'months-painting', component: MonthsPaintingComponent},
   {path:'cart', component: CartComponent},
   {path:'contact', component: ContactComponent},
   {path:'dashboard', component: DashboardComponent}

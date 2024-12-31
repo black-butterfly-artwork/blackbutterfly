@@ -35,32 +35,43 @@
     </div>
   </mat-toolbar> -->
 <header>
-    <mat-toolbar style="background-color:green-a100; margin-bottom:15px">
-        <div class="title">
-            <img src="../../../assets/images/Title2.jpg">
-        </div>
-
-        
-        <span class="fill-remaining-space">
-            <div style="margin-left: 40%">
-                <button mat-button *ngFor="let menuItem of menuItems" style="height: 100%">
-                    <li routerLinkActive="active" class="{{menuItem.class}} nav-item">
-                        <a class="nav-link" [routerLink]="[menuItem.path]">
-                            <i class="material-icons">{{menuItem.icon}}</i>
-                            <p class="menu-title">{{menuItem.title}}</p>
-                        </a>
-                    </li>
-                </button>
-                <button routerLink="cart"  class="btn btn-primary button-cart">
-                    <i style="font-size: 30px;" class="fa fa-shopping-cart"></i>
+    <div class="header-container">
+        <div class="row flex-container">
+            <div class="cart-column">
+                <button routerLink="cart"  class="btn btn-primary button-cart cart">
+                    <i style="font-size: 37px;" class="fa fa-shopping-bag"></i>
                     <div style="font-size: 11px;" class="badge bg-danger badge-top-left">{{totalItem}}</div>
                 </button>
             </div>
-        </span>
-    </mat-toolbar>
+        </div>
+        <div class="row">
+            <div class="title bubbler-one-regular">
+                BLACK BUTTERFLY
+                <!--img src="../../../assets/images/Title2.jpg"-->
+            </div>
+        </div>
+        <div class="row">
+            <span class="fill-remaining-space">
+                <div style="text-align: center">
+                    <button mat-button *ngFor="let menuItem of menuItems" class="bubbler-one-regular" style="height: 100%">
+                        <li routerLinkActive="active" class="{{menuItem.class}} nav-item" style="display:block">
+                            <a class="nav-link" [routerLink]="[menuItem.path]">
+                                <i class="material-icons">{{menuItem.icon}}</i>
+                                <p class="menu-title">{{menuItem.title}}</p>
+                            </a>
+                        </li>
+                    </button>
+                </div>
+            </span>
+        </div>
+    </div>
 </header>
 
-
+<div class="card-top container-fluid">
+    <div class="container d-flex card-top-container mb-4">
+    </div>
+    <hr>
+</div>
 
 
 <!--header>
